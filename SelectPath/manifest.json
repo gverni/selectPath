@@ -2,14 +2,16 @@
    "author": "gverni",
    "manifest_version": 2,
 
-   "background": {
-      "persistent": false,
-      "scripts": [ "background.js" ]
-   },
+   "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["selectPath.js"]
+   }], 
 
    "browser_action": {
       "default_icon": "nwpath.png",
-      "default_title": "Search and select network paths in the current page"
+      "default_title": "Search and select network paths in the current page", 
+      "default_popup": "popup.html"
    },
 
    "description": "Search and select network paths in the current page",
