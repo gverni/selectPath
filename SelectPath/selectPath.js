@@ -11,5 +11,13 @@ function selectPath () {
     window.alert('No  network path found on the page!')
   }
 }
+console.log('executing selectPath.js')
 
-selectPath()
+chrome.runtime.onConnect.addListener(function(port) {
+  console.log('Received connect...')
+  port.onMessage.addListener(function(msg) {
+   console.log('Recieved message... ' + msg['direction'])
+  });
+});
+
+

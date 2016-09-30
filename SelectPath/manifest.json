@@ -2,16 +2,18 @@
    "author": "gverni",
    "manifest_version": 2,
 
-   "background": {
-      "persistent": false,
-      "scripts": [ "background.js" ]
-   },
+   "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file://*/*"],
+      "js": ["selectPath.js"]
+   }],
 
    "icons": { "48": "icon48.png",
              "128": "icon128.png" },
 
    "browser_action": {
-      "default_title": "Search and select network paths in the current page"
+      "default_title": "Search and select network paths in the current page",
+      "default_popup": "popup.html"
    },
 
    "description": "Search and select network paths in the current page",
