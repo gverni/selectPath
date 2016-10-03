@@ -16,11 +16,8 @@ console.log('executing selectPath.js')
 chrome.runtime.onConnect.addListener(function(port) {
   console.log('Received connect...')
   port.onMessage.addListener(function(msg) {
-   console.log('Recieved message...')
+   console.log('Recieved message... ' + msg['direction'])
   });
 });
 
-chrome.extension.onRequest.addListener(
-  function(request, sender, sendResponse) {
-    window.alert('received')
-  });
+
