@@ -1,5 +1,5 @@
-function selectPath () {
-  var strFound = window.find('\\\\', false, false, true)
+function selectPath (previous) {
+  var strFound = window.find('\\\\', false, previous, true)
   if (strFound) {
     var selObj = window.getSelection()
     selObj.modify('extend', 'right', 'character')
@@ -11,12 +11,12 @@ function selectPath () {
     window.alert('No  network path found on the page!')
   }
 }
-console.log('executing selectPath.js')
 
 chrome.runtime.onConnect.addListener(function(port) {
   console.log('Received connect...')
   port.onMessage.addListener(function(msg) {
    console.log('Recieved message... ' + msg['direction'])
+   selectPath (msg['direction']==='previous')
   });
 });
 
