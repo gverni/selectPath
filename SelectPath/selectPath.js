@@ -12,8 +12,8 @@ function selectPath (previous) {
   }
 }
 
-chrome.runtime.onConnect.addListener(function(port) {
-  port.onMessage.addListener(function(msg) {
-   selectPath (msg['direction']==='previous')
-  });
-});
+chrome.runtime.onConnect.addListener(function (port) {
+  port.onMessage.addListener(function (msg) {
+    selectPath(msg['direction'] === 'previous')
+  })
+})
