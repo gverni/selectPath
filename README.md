@@ -4,10 +4,19 @@ findPath
 An extension developed in 5 minutes to search for network paths in a page and automatically select it. 
 
 Improvements (after all I did in 5 minutes): 
-- Better selection algorithm 
+- Better search algorithm 
 - Auto copy the selection to clipboard
+
+
+**Release notes**
+
+(0.3)
 - Add next / previous controls
 
-The main script (selectPath.js) has been verified with: 
+(0.2) 
+- Added new icon
+
+
+All the scripts have been verified with: 
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
