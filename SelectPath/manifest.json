@@ -19,5 +19,5 @@
    "description": "Search and select network paths in the current page",
    "name": "selectPath",
    "permissions": [ "activeTab" ],
-   "version": "0.2"
+   "version": "0.3"
 }
