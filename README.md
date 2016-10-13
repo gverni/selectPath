@@ -1,7 +1,9 @@
 findPath
 ========
 
-An extension developed in 5 minutes to search for network paths in a page and automatically select it. 
+An extension developed in 5 minutes to search for network paths in a page and automatically select it. Extension can be downaloded from: 
+https://chrome.google.com/webstore/detail/selectpath/njpgdmhmplongjkbidclifbnopjehnfb
+
 
 Improvements (after all I did in 5 minutes): 
 - Better search algorithm 
